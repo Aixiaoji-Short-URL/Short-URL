@@ -4,7 +4,7 @@
 > Short connection generator written in PHP, without using MySQL
 
 ## 演示：
-[LongURL（进行过部分改造）](longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org)
+[LongURL（进行过部分改造）](https://longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org/)
 
 ## 功能：
 API
