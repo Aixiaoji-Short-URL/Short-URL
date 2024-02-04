@@ -1,9 +1,12 @@
+<?php
+    include './Configs/LanguagePacks/Engilsh/English-American.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>长短连接生成器（开源）</title>
+    <title><?php echo $LanguageV1["title"]; ?></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,19 +61,19 @@
 </head>
 <body>
 
-<h1>长短连接生成器（开源）</h1>
+<h1><?php echo $LanguageV1["h1"]; ?></h1>
 
 <form method="POST" action="">
-    <label for="original_url">原始URL：</label>
+    <label for="original_url"><?php echo $LanguageV1["CC-original_url"]; ?></label>
     <input type="text" name="original_url" required>
 
-    <label for="password">密码：</label>
+    <label for="password"><?php echo $LanguageV1["CC-password"]; ?></label>
     <input type="text" name="password">
 
-    <label for="diy_url">自定义URL：</label>
+    <label for="diy_url"><?php echo $LanguageV1["CC-diy_url"]; ?></label>
     <input type="text" name="diy_url">
 
-    <input type="submit" value="生成长短连接">
+    <input type="submit" value="<?php echo $LanguageV1["Create-submit"]; ?>">
 </form>
 
 <?php
@@ -84,8 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 获取当前网站域名
     $current_domain = $_SERVER['HTTP_HOST'];
 
+    // 确定协议
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+
     // 构建API请求URL
-    $api_url = "https://" . $current_domain . "/addurl_api.php";
+    $api_url = $protocol . $current_domain . "/addurl_api.php";
     $api_url .= "?original_url=" . urlencode($original_url);
 
     // 添加密码参数
@@ -110,9 +116,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 处理响应
     if ($result["code"] == 1) {
-        echo "<p>生成的长连接： <a href='https://" . $current_domain . "/i.php?i={$result["diy_url"]}'>https://" . $current_domain . "/i.php?i={$result["diy_url"]}</a></p>";
+        echo $LanguageV1["Create-OK"] . "<p><a href='" . $protocol . $current_domain . "/i.php?i={$result["diy_url"]}'>" . $protocol . $current_domain . "/i.php?i={$result["diy_url"]}</a></p>";
     } else {
-        echo "<p>生成长连接时出错：{$result["msg"]}</p>";
+        echo $LanguageV1["Create-ERROR"] . "<p>{$result["msg"]}</p>";
     }
 }
 ?>
