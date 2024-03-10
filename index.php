@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 处理响应
     if ($result["code"] == 1) {
-        echo $LanguageV1["Create-OK"] . "<p><a href='" . $protocol . $current_domain . "/i.php?i={$result["diy_url"]}'>" . $protocol . $current_domain . "/i.php?i={$result["diy_url"]}</a></p>";
+        echo $LanguageV1["Create-OK"] . "<p><a href='" . $protocol . $current_domain . "/i/?i={$result["diy_url"]}'>" . $protocol . $current_domain . "/i/?i={$result["diy_url"]}</a></p>";
     } else {
         echo $LanguageV1["Create-ERROR"] . "<p>{$result["msg"]}</p>";
     }
