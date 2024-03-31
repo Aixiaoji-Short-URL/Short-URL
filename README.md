@@ -1,7 +1,10 @@
-# :-: **Short-URL**
+# **Short-URL**
 ## **介绍：**
 > 使用PHP写的短连接生成器，没有使用MySQL。较为简洁。支持中文（index.php）和英文界面（index-Engilsh.php）。
-> 
+>
+
+## 提示：
+> Short-URL 已经从 HelloAIXIAOJI/Short-URL 迁移到组织 Aixiaoji-Short-URL/Short-URL ，请注意！
 
 ## 演示：
 [LongURL（进行过部分改造）](https://longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org/)
