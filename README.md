@@ -1,6 +1,6 @@
 # **Short-URL**
 ## **介绍：**
-> 使用PHP写的短连接生成器，没有使用MySQL。较为简洁。支持中文（index.php）和英文界面（index-Engilsh.php）。
+> 使用PHP写的短连接生成器，没有使用MySQL。较为简洁。支持语言包。
 >
 
 ## 提示：
