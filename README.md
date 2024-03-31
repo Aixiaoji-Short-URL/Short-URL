@@ -29,6 +29,7 @@ Configs/LanguagePacks                              语言包
 * [ ] 一次性访问
 * [ ] 不允许特定地区访问
 * [v] 语言包加入
+* [ ] 将CANS 数据改为 Json
 * [ ] ~~移除Herobrine~~（Bushi
 
 ## 吐槽：
