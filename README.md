@@ -13,6 +13,7 @@
 * API
 * 带有密码的URL
 * 自定义URL
+* 语言包
 **（更多功能提Issues或Pull让我添加 - Issues title前要加“{功能意见}” or “{FAA}”）**
 
 ## 文件说明：
@@ -28,7 +29,6 @@ Configs/LanguagePacks                              语言包
 * [ ] 拥有次数的访问
 * [ ] 一次性访问
 * [ ] 不允许特定地区访问
-* [v] 语言包加入
 * [ ] 将CANS 数据改为 Json
 * [ ] ~~移除Herobrine~~（Bushi
 
