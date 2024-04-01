@@ -1,23 +1,23 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-function readCANS($file_path) {
-    $lines = file($file_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    $cans_data = [];
-
-    foreach ($lines as $line) {
-        $columns = explode('<cut>', $line);
-        $cans_data[] = $columns;
-    }
-
-    return $cans_data;
+// 读取JSON文件
+// Read JSON file
+function readJSON($file_path) {
+    $json_content = file_get_contents($file_path);
+    $data = json_decode($json_content, true);
+    return $data;
 }
 
+// 重定向到原始URL
+// Redirect to original URL
 function redirectToOriginalURL($original_url) {
     echo "<meta http-equiv='refresh' content='0;url={$original_url}'>";
     echo "您即将跳转 - You are about to jump to {$original_url}";
 }
 
+// 显示错误信息
+// Display error message
 function displayError($message) {
     echo "<p style='color: red;'>{$message}</p>";
 }
@@ -27,15 +27,15 @@ $i = isset($_GET['i']) ? $_GET['i'] : '';
 if (empty($i)) {
     displayError('Error: Parameter "i" is not specified');
 } else {
-    $cans_data = readCANS('url.cans');
+    $cans_data = readJSON('url.json');
 
     $matched = false;
     foreach ($cans_data as $row) {
-        if ($row[1] == $i) {
+        if ($row['diy_url'] == $i) {
             $matched = true;
 
-            if ($row[2] == 'no_password') {
-                redirectToOriginalURL($row[0]);
+            if ($row['password'] == 'no_password') {
+                redirectToOriginalURL($row['original_url']);
             } else {
                 echo "<html>
                         <head>
@@ -96,8 +96,8 @@ if (empty($i)) {
 
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $entered_password = isset($_POST['password']) ? $_POST['password'] : '';
-                    if ($entered_password == $row[2]) {
-                        redirectToOriginalURL($row[0]);
+                    if ($entered_password == $row['password']) {
+                        redirectToOriginalURL($row['original_url']);
                     } else {
                         displayError('Error: Please re-enter the correct password');
                     }
