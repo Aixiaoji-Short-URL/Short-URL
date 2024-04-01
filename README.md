@@ -1,7 +1,10 @@
-# :-: **Short-URL**
+# **Short-URL**
 ## **介绍：**
-> 使用PHP写的短连接生成器，没有使用MySQL。较为简洁。支持中文（index.php）和英文界面（index-Engilsh.php）。
-> 
+> 使用PHP写的短连接生成器，没有使用MySQL。较为简洁。支持语言包。
+>
+
+## 提示：
+> Short-URL 已经从 HelloAIXIAOJI/Short-URL 迁移到组织 Aixiaoji-Short-URL/Short-URL ，请注意！
 
 ## 演示：
 [LongURL（进行过部分改造）](https://longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org/)
@@ -10,6 +13,7 @@
 * API
 * 带有密码的URL
 * 自定义URL
+* 语言包
 **（更多功能提Issues或Pull让我添加 - Issues title前要加“{功能意见}” or “{FAA}”）**
 
 ## 文件说明：
@@ -25,7 +29,7 @@ Configs/LanguagePacks                              语言包
 * [ ] 拥有次数的访问
 * [ ] 一次性访问
 * [ ] 不允许特定地区访问
-* [v] 语言包加入
+* [ ] 将CANS 数据改为 Json
 * [ ] ~~移除Herobrine~~（Bushi
 
 ## 吐槽：
