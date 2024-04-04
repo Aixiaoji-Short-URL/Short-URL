@@ -8,7 +8,7 @@
 > 我们已经从CANS替换为JSON
 
 ## 演示：
-[LongURL（进行过部分改造）](https://longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org/)
+[L1I URL（进行过部分改造）](http://l1i.top/)  
 **（申请演示站点提issues让我添加 - Issues title前要加“{演示申请}” or “{DWA}”）**
 ## 功能：
 * API
