@@ -14,7 +14,7 @@
 * API
 * 带有密码的URL
 * 自定义URL
-* 语言包
+* 语言包  
 **（更多功能提Issues或Pull让我添加 - Issues title前要加“{功能意见}” or “{FAA}”）**
 
 ## 文件说明：
