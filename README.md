@@ -5,6 +5,7 @@
 
 ## 提示：
 > Short-URL 已经从 HelloAIXIAOJI/Short-URL 迁移到组织 Aixiaoji-Short-URL/Short-URL ，请注意！
+> 我们已经从CANS替换为JSON
 
 ## 演示：
 [LongURL（进行过部分改造）](https://longlonglonglonglonglonglonglonglonglonglonglong.nl.eu.org/)
