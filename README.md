@@ -33,7 +33,9 @@
 * [ ] 不允许特定地区访问
 * [x] 将CANS 数据改为 Json
 * [ ] ~~移除Herobrine~~（Bushi
-
+## 成就：
+### Star历史
+[![Star History Chart](https://api.star-history.com/svg?repos=Aixiaoji-Short-URL/Short-URL&type=Timeline)](https://star-history.com/#Aixiaoji-Short-URL/Short-URL&Timeline)
 ## 整活：
 * *来自Aixiaoji的吐槽:一个月前 CANS 数据就改成了 Json Md介绍页到现在才更新（难崩
 * *来自Aixiaoji的吐槽:未来加入建议改成画大饼时间
