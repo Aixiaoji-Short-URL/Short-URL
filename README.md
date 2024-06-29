@@ -25,7 +25,7 @@
 | i & i.php             | 跳转文件 |
 | README.md             | 文档       |
 | addurl_api.php        | API          |
-| index.php             | 首页       |
+| index.php             | 首页(默认语言为English-American) |
 | url.json              | 跳转数据存放 |
 ## 未来加入：
 * [ ] 拥有次数的访问
