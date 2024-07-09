@@ -8,29 +8,26 @@
 > B.我们已经从CANS替换为JSON
 
 ## 演示：
-[L1I URL（进行过部分改造）](http://l1i.top/)  
+[L1I URL（暂不可用）](http://l1i.top/)  
 **（申请演示站点提issues- Issues title前要加“{演示申请}” or “{DWA}”）**
 ## 功能：
 * API
 * 带有密码的URL
 * 自定义URL
-* 语言包  
+* 语言包
+* 管理面板（NEW
+* 主题（NEW
 **（更多功能提Issues或Pull - title前要加“{功能意见}” or “{FAA}”）**
 
 ## 文件说明：
 | 文件名             | 作用       |
 | --------------------- | ------------ |
-| CSS                   | CSS          |
-| Configs/LanguagePacks | 语言包    |
-| i & i.php             | 跳转文件 |
-| README.md             | 文档       |
-| addurl_api.php        | API          |
-| index.php             | 首页(默认语言为English-American) |
-| url.json              | 跳转数据存放 |
+
+我们正在重写...
 ## 未来加入：
-* [ ] 拥有次数的访问
-* [ ] 一次性访问
-* [ ] 不允许特定地区访问
+* [ ] 拥有次数的访问（I need help！！！
+* [ ] 一次性访问（I need help！！！
+* [ ] 不允许特定地区访问（I need help！！！
 * [x] 将CANS 数据改为 Json
 * [ ] ~~移除Herobrine~~（Bushi
 ## 成就：
