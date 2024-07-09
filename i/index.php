@@ -1,4 +1,10 @@
 <?php
+include("../Configs/Main/WebMainConfig.php");
+$UseLanguage = "..".$ConfigMain["Language"];
+include($UseLanguage);
+?>
+
+<?php
 header('Content-Type: text/html; charset=utf-8');
 
 // 读取JSON文件
@@ -37,7 +43,10 @@ if (empty($i)) {
             if ($row['password'] == 'no_password') {
                 redirectToOriginalURL($row['original_url']);
             } else {
-                include './ui.html'; // Include UI file
+                
+                include("..".$ConfigMain["Theme"]."/themeconfig.php");
+                include("..".$ConfigMain["Theme"].$ThemeConfigMainUIpath["i.php-UI"]);// Include UI file
+                
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $entered_password = isset($_POST['password']) ? $_POST['password'] : '';
                     if ($entered_password == $row['password']) {
