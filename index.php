@@ -49,9 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 处理响应
     if ($result["code"] == 1) {
-        echo htmlspecialchars($LanguageV1["Create-OK_index"]) . "<p><a href='" . htmlspecialchars($protocol . $current_domain . "/i/?i={$result["diy_url"]}") . "'>" . htmlspecialchars($protocol . $current_domain . "/i/?i={$result["diy_url"]}") . "</a></p>";
+        include(".".$ConfigMain["Theme"].$ThemeConfigMainUIpath["index.php-return-ok-UI"]);
+
     } else {
-        echo htmlspecialchars($LanguageV1["Create-ERROR_index"]) . "<p>" . htmlspecialchars($result["msg"]) . "</p>";
+        include(".".$ConfigMain["Theme"].$ThemeConfigMainUIpath["index.php-return-error-UI"]);
     }
 }
 ?>
