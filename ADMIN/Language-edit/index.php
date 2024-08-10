@@ -2,50 +2,45 @@
 include("../../Configs/Main/WebMainConfig.php");
 $UseLanguage = "../..".$ConfigMain["Language"];
 include($UseLanguage);
+
+// 获取所有的语言包变量
+$languageVars = array_filter(
+    get_defined_vars(),
+    function($key) {
+        return preg_match('/^LanguageV\d+$/', $key);
+    },
+    ARRAY_FILTER_USE_KEY
+);
 ?>
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理后台首页</title>
+    <title>Admin Panel</title> 
     <link rel="stylesheet" href="../Resource-File/MDUI/main/mdui.min.css"> 
     <script src="../Resource-File/MDUI/main/mdui.min.js"></script>
 </head>
 <body>
-        <?php include '../navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
 
     <div class="mdui-container">
-        
-        <h1 class="mdui-typo-display-2">Select the edited version</h1>
-        <p>UseLanguage=<?php echo $UseLanguage; ?></p>
-        
-        
-        <div class="mdui-row mdui-m-t-2">
-            <div class="mdui-col-md-4">
-                <div class="mdui-card">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">Edit V1</div>
-                    <div class="mdui-card-actions">
-                        <a href="./V1.php" class="mdui-btn mdui-btn-raised mdui-color-blue">EDIT</a>
+        <h1 class="mdui-typo-display-2">Language Editor</h1>
+        <form id="configForm" class="mdui-form" method="post" action="./save_config.php">
+            <?php foreach ($languageVars as $langVersion => $langArray): ?>
+                <h2 class="mdui-typo-display-1"><?php echo $langVersion; ?></h2>
+                <input type="hidden" name="langVersion" value="<?php echo $langVersion; ?>">
+                <?php foreach ($langArray as $key => $value): ?>
+                    <div class="mdui-textfield">
+                        <label class="mdui-textfield-label"><?php echo $key; ?></label>
+                        <input class="mdui-textfield-input" type="text" name="<?php echo $langVersion; ?>[<?php echo $key; ?>]" value="<?php echo $value; ?>">
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mdui-row mdui-m-t-2">
-            <div class="mdui-col-md-4">
-                <div class="mdui-card">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">Edit V2</div>
-                    <div class="mdui-card-actions">
-                        <a href="./V2.php" class="mdui-btn mdui-btn-raised mdui-color-blue">EDIT</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
+                <?php endforeach; ?>
+                <hr>
+            <?php endforeach; ?>
+            <button type="submit" class="mdui-btn mdui-btn-raised mdui-color-theme mdui-m-t-2">Save Changes</button>
+        </form>
     </div>
 </body>
 </html>
